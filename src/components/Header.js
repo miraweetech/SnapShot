@@ -26,20 +26,25 @@ const Header = () => {
           value={searchQuery}
           onChange={handleInputChange}
         />
-        <button className="search-btn">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </button>
+        {searchQuery && (
+          <button className="search-btn">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        )}
       </div>
       <ul>
-        {filteredItems.length > 0 ? (
+        {filteredItems.length > 0 && (
           filteredItems.map((item, index) => <li key={index}>{item}</li>)
-        ) : (
-          <li>No matching items found</li>
         )}
       </ul>
+
+      <div class="allbutton">
+        <button class="btn">Mountain</button>
+        <button class="btn">Beaches</button>
+        <button class="btn">Birds</button>
+        <button class="btn">Food</button>
+      </div>
     </>
   );
 };
 export default Header;
-
-

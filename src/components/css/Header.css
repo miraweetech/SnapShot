@@ -2,12 +2,12 @@
     box-sizing: border-box;
     padding: 0%;
     margin: 0%;
-    text-align: center;
 }
 .snapshot{
     color: #051c33;
     font-size: 65px;
     margin-top: 50PX;
+    text-align: center;
 }
 .search-field{
     display: flex;
@@ -33,7 +33,33 @@
     border: none;
     color: white;
     border-radius: 0 .35em .35em 0;
+    pointer-events: none;
 }
 ul li{
     list-style-type: none;
+}
+.allbutton{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+.btn{
+    background-color: #051c33;
+    width: 10%;
+    color: white;
+}
+.btn:hover{
+    background-color: #051c33;
+    width: 10%;
+    cursor: pointer;
+    color: white;
+}
+@media (max-width: 768px) {
+    .allbutton{
+        width: 100%;
+    }
+    .btn{
+        width: 100%;
+    }
 }
