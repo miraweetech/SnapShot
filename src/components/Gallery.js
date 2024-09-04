@@ -1,33 +1,35 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-// import { fetchPhotos } from "../redux/reducer/GallerySlice";
+import React from "react";
+import { useSelector } from "react-redux";
+import NoImages from "./NoImages";
+import Image from "./Image";
 
+const Gallery = () => {
+  const { images, loading } = useSelector((state) => state.photo);
 
-const Gallery = ({ query }) => {
-  const dispatch = useDispatch();
-  const { images, loading, error } = useSelector((state) => state.photos);
-
-  useEffect(() => {
-    if (query) {
-      // dispatch(fetchPhotos(query));
-    }
-  }, [dispatch, query]);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) return <p>loading....</p>;
 
   return (
-    <div>
-      {images.map((image) => (
-        <img
-          key={image.id}
-          src={`https://live.staticflickr.com/${image.server}/${image.id}_${image.secret}_m.jpg`}
-          alt={image.title}
-        />
-      ))}
-    </div>
+    <>
+      <div>
+        {images.length === 0 ? (
+          <ul>
+            {images.map((image) => {
+              let farm = image.farm;
+              let server = image.server;
+              let id = image.id;
+              let secret = image.secret;
+              let title = image.title;
+              let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
+              return <Image url={url} key={id} alt={title} />;
+            })}
+          </ul>
+        ) : (
+          <p></p>
+          // <NoImages />
+        )}
+      </div>
+    </>
   );
 };
 
 export default Gallery;
-

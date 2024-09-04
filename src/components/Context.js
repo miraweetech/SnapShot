@@ -1,19 +1,24 @@
-import React from "react";
-import Loader from '../components/Loadar'
+import React, { useEffect } from "react";
+import Loader from "../components/Loadar";
 import Gallery from "./Gallery";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPhotos } from "../redux/reducer/ContainerSlice";
 
-const Context = ({ searchTerm }) => {
-  const { items, status } = useSelector((state) => state.gallery);
+const Context = () => {
+  const dispatch = useDispatch();
+  const searchTerm = useSelector((state) => state.search.searchEntry);
+  const { images, loading } = useSelector((state) => state.photo);
+
+  useEffect(() => {
+    if (searchTerm) {
+      dispatch(fetchPhotos(searchTerm));
+    }
+  }, [searchTerm, dispatch]);
 
   return (
-    <div>
-      {status === "loading" ? (
-        <Loader />
-      ) : (
-        <Gallery items={items} searchTerm={searchTerm} />
-      )}
-    </div>
+    <>
+      <div>{loading ? <Loader /> : <Gallery data={images} />}</div>
+    </>
   );
 };
 

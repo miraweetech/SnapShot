@@ -1,7 +1,7 @@
-import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import Header from "./components/Header";
-import Loadar from "./components/Loadar";
+import "./App.css"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
+import Header from "./components/Header"
+import Loadar from "./components/Loadar"
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,12 +1,12 @@
 import React from "react";
 
-const NoImage = () => {
+const NoImages = () => {
   return (
     <>
-      <h1>No Image Found</h1>
+      <h3>No Image Found</h3>
       <p>Please try a different search term</p>
     </>
   );
 };
 
-export default NoImage
+export default NoImages
