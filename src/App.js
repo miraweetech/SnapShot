@@ -1,14 +1,17 @@
 import "./App.css";
-import { Provider } from "react-redux";
-import Navigation from "./components/Navigation";
-import { Store } from "./redux/reducer/Store";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
+import Loadar from "./components/Loadar";
 
 function App() {
   return (
     <>
-      <Provider store={Store}>
-        <Navigation />
-      </Provider>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/mountain" element={<Loadar />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
