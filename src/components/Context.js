@@ -17,9 +17,7 @@ const Context = () => {
 
   return (
     <>
-      <div className="photo-container">
-        {loading ? <Loader /> : <Gallery data={images} />}
-      </div>
+      <div>{loading ? <Loader /> : <Gallery data={images} />}</div>
     </>
   );
 };

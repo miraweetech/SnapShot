@@ -12,7 +12,7 @@ const Beaches = () => {
 
   return (
     <>
-      <h2>Beaches Images</h2>
+      {/* <h2>Beaches Images</h2> */}
       <Gallery />
     </>
   );

@@ -12,7 +12,7 @@ const Mountain = () => {
   
   return (
     <>
-      <h2>Mountain Images</h2>
+      {/* <h2>Mountain Images</h2> */}
       <Gallery />
     </>
   );

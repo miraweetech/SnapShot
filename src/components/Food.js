@@ -13,7 +13,7 @@ const Food = () => {
   return (
     <>
       <div>
-        <h2>Food Images</h2>
+        {/* <h2>Food Images</h2> */}
         <Gallery />
       </div>
     </>

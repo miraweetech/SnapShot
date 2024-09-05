@@ -17,7 +17,6 @@ body {
 
 h2 {
   font-size: 2em;
-  /* margin: 52px 0 40px; */
   text-transform: capitalize;
   color: #051c33;
 }
@@ -98,10 +97,6 @@ input {
 .main-nav a:hover {
   background-color: #051c33;
 }
-.photo-container{
-  width: 80%;
-  margin:  auto;
-}
 
 .photo-container ul {
   display: flex;
@@ -121,14 +116,20 @@ input {
 .photo-container img {
   transform: scale(1.25);
   transition: transform 1.25s;
-  width: 220px;
-  height: 165px;
-  /* overflow: hidden; */
-  padding: 10px;
+  width: 100%;
+}
+.photo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+  width: 80%;
+  margin: auto;
 }
 
 .photo-container img:hover {
-  transform: scale(1.65);
+  transform: scale(1.05);
 }
 
 .photo .not-found {
