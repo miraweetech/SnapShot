@@ -21,7 +21,7 @@ const From = () => {
 
   return (
     <>
-      <form className="search-form" onSubmit={handleSubmit}>
+      <div className="search-form" onClick={handleSubmit}>
         <input
           type="text"
           name="search"
@@ -34,7 +34,7 @@ const From = () => {
             <i className="fa fa-search" aria-hidden="true"></i>
           </button>
         )}
-      </form>
+      </div>
     </>
   );
 };

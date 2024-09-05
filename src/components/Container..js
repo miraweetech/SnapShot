@@ -4,7 +4,7 @@ import { fetchPhotos } from "../redux/reducer/ContainerSlice";
 
 const Container = ({ query }) => {
   const dispatch = useDispatch();
-  const { images, loading, error } = useSelector((state) => state.photo); // Ensure consistency
+  const { images, loading, error } = useSelector((state) => state.photo); 
 
   useEffect(() => {
     if (query) {
@@ -12,11 +12,11 @@ const Container = ({ query }) => {
     }
   }, [dispatch, query]);
 
-  if (loading) return <p>Loading...</p>;
+  // if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="photo-container">
       {images.map((photo) => (
         <img
           key={photo.id}
