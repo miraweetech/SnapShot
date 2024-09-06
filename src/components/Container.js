@@ -6,6 +6,7 @@ const Container = ({ query }) => {
   const dispatch = useDispatch();
   const { images } = useSelector((state) => state.photo);
   const searchTerm = useSelector((state) => state.search.searchEntry);
+  console.log("searchTerm", searchTerm);
 
   useEffect(() => {
     if (query) {

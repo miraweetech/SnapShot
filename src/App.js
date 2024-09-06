@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Mountain />} />
-          <Route path="/mountain" element={<Mountain />} />
+          <Route path="/mountain/:category" element={<Mountain />} />
           <Route path="/beach" element={<Beaches />} />
           <Route path="/bird" element={<Birds />} />
           <Route path="/food" element={<Food />} />

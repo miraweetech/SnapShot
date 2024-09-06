@@ -5,6 +5,7 @@ import Gallery from "./Gallery";
 
 const Mountain = () => {
   const dispatch = useDispatch();
+  
 
   useEffect(() => {
     dispatch(fetchPhotos("mountain"));
@@ -12,7 +13,6 @@ const Mountain = () => {
   
   return (
     <>
-      {/* <h2>Mountain Images</h2> */}
       <Gallery />
     </>
   );

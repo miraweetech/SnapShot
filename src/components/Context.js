@@ -19,7 +19,7 @@ const Context = () => {
     <>
       <div>{loading ? <Loader /> : <Gallery data={images} />}</div>
     </>
-  );
-};
+  )
+}
 
 export default Context;

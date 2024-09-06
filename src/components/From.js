@@ -9,6 +9,8 @@ const From = () => {
   const navigate = useNavigate();
 
   const updateSearchInput = (e) => {
+    console.log("e", e.target.value);
+
     dispatch(setSearchEntry(e.target.value));
   };
 

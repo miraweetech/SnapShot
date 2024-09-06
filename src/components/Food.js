@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchPhotos } from "../redux/reducer/ContainerSlice";
 import Gallery from "./Gallery";
 
@@ -13,7 +13,6 @@ const Food = () => {
   return (
     <>
       <div>
-        {/* <h2>Food Images</h2> */}
         <Gallery />
       </div>
     </>

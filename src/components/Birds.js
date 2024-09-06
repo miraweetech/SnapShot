@@ -13,7 +13,6 @@ const Birds = () => {
   return (
     <>
       <div>
-        {/* <h2>Birds Images</h2> */}
         <Gallery />
       </div>
     </>
