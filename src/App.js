@@ -5,6 +5,7 @@ import Mountain from "./components/Mountain";
 import Beaches from "./components/Beaches";
 import Birds from "./components/Birds";
 import Food from "./components/Food";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (

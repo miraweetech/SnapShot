@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navigation from "./Navigation";
 import Container from "./Container";
 import Context from "./Context";
@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 import { setSearchEntry } from "../redux/reducer/SearchSlice";
 
 const Header = () => {
-  const [searchTriggered, setSearchTriggered] = useState(false);
   const dispatch = useDispatch();
   const searchEntry = useSelector((state) => state.search.searchEntry);
   const navigate = useNavigate();
@@ -25,7 +24,7 @@ const Header = () => {
   return (
     <>
       <h1>SnapShot</h1>
-      <div className="search-form" onClick={handleSubmit}>
+      <div className="search-form">
         <input
           type="text"
           name="search"
@@ -35,10 +34,7 @@ const Header = () => {
         />
         {searchEntry && (
           <button className="search-btn" 
-                  onClick={(e) => {
-                    e.preventDefault()
-                    setSearchTriggered(true);
-                  }}>
+                  onClick={handleSubmit}>
             <i className="fa fa-search" aria-hidden="true"></i>
           </button>
         )}
