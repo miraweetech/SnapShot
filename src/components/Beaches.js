@@ -7,7 +7,7 @@ const Beaches = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchPhotos("beache"));
+    dispatch(fetchPhotos("beach"));
   }, [dispatch]);
 
   return (
